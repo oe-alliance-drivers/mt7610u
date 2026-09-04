@@ -127,13 +127,13 @@ typedef struct usb_ctrlrequest devctrlrequest;
 #ifdef CONFIG_STA_SUPPORT
 
 #ifdef RTMP_MAC_USB
-#define STA_PROFILE_PATH			"/etc/Wireless/RT2870STA/RT2870STA.dat"
+#define STA_PROFILE_PATH			"/etc/Wireless/mt7610uSTA/mt7610uSTA.dat"
 #define STA_DRIVER_VERSION			"3.0.0.2"
 #ifdef SINGLE_SKU_V2
-#define SINGLE_SKU_TABLE_FILE_NAME	"/etc/Wireless/RT2870STA/SingleSKU.dat"
+#define SINGLE_SKU_TABLE_FILE_NAME	"/etc/Wireless/mt7610uSTA/SingleSKU.dat"
 #endif /* SINGLE_SKU_V2 */
 #ifdef MULTIPLE_CARD_SUPPORT
-#define CARD_INFO_PATH			"/etc/Wireless/RT2870STA/RT2870STACard.dat"
+#define CARD_INFO_PATH			"/etc/Wireless/mt7610uSTA/mt7610uSTACard.dat"
 #endif /* MULTIPLE_CARD_SUPPORT */
 #endif /* RTMP_MAC_USB */
 
@@ -1520,7 +1520,7 @@ extern int rausb_control_msg(VOID *dev,
 #ifdef RTMP_MAC_USB
 #ifdef CONFIG_STA_SUPPORT
 #undef EEPROM_BIN_FILE_NAME /* Avoid APSTA mode re-define issue */
-#define EEPROM_BIN_FILE_NAME  "/etc/Wireless/RT2870STA/e2p.bin"
+#define EEPROM_BIN_FILE_NAME  "/etc/Wireless/mt7610uSTA/e2p.bin"
 #endif /* CONFIG_STA_SUPPORT */
 #endif /* RTMP_MAC_USB */
 
