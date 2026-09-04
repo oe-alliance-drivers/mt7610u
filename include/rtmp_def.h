@@ -1621,14 +1621,14 @@ enum WIFI_MODE{
 #define INF_MBSSID_DEV_NAME		"wlan"
 #else
 #if CONFIG_RT_FIRST_CARD == 7610
-#define INF_MAIN_DEV_NAME		"ra"
-#define INF_MBSSID_DEV_NAME		"ra"
+#define INF_MAIN_DEV_NAME		"wlan"
+#define INF_MBSSID_DEV_NAME		"wlan"
 #elif CONFIG_RT_SECOND_CARD == 7610
 #define INF_MAIN_DEV_NAME		"rai"
 #define INF_MBSSID_DEV_NAME		"rai"
 #else
-#define INF_MAIN_DEV_NAME		"ra"
-#define INF_MBSSID_DEV_NAME		"ra"
+#define INF_MAIN_DEV_NAME		"wlan"
+#define INF_MBSSID_DEV_NAME		"wlan"
 #endif
 #endif /* ANDROID_SUPPORT */
 #if CONFIG_RT_FIRST_CARD == 7610

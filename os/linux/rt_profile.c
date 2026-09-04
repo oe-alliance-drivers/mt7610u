@@ -164,7 +164,7 @@ NDIS_STATUS	RTMPReadParametersHook(
 		for (i = 0; i < pAd->ApCfg.BssidNum; i++)
 		{
 			pAd->ApCfg.MBSSID[i].Hostapd=FALSE;
-			DBGPRINT(RT_DEBUG_TRACE, ("Reset ra%d hostapd support=FLASE", i));
+			DBGPRINT(RT_DEBUG_TRACE, ("Reset wlan%d hostapd support=FLASE", i));
 			
 		}
 #endif /*HOSTAPD_SUPPORT */
@@ -263,7 +263,7 @@ VOID RtmpDrvSendWirelessEvent(
 		if (pAddr)
 			pBufPtr += sprintf(pBufPtr, "(RT2860) STA(%02x:%02x:%02x:%02x:%02x:%02x) ", PRINT_MAC(pAddr));				
 		else if (BssIdx < MAX_MBSSID_NUM(pAd))
-			pBufPtr += sprintf(pBufPtr, "(RT2860) BSS(ra%d) ", BssIdx);
+			pBufPtr += sprintf(pBufPtr, "(RT2860) BSS(wlan%d) ", BssIdx);
 		else
 			pBufPtr += sprintf(pBufPtr, "(RT2860) ");
 

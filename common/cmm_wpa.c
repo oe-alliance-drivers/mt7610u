@@ -4172,7 +4172,7 @@ VOID WPAInstallSharedKey(
 		pSharedKey->CipherAlg = CIPHER_AES;
 	else
 	{
-		DBGPRINT(RT_DEBUG_ERROR, ("%s : fails (IF/ra%d) \n", 
+		DBGPRINT(RT_DEBUG_ERROR, ("%s : fails (IF/wlan%d) \n", 
 										__FUNCTION__, BssIdx));	
 		return;
 	}
@@ -4184,7 +4184,7 @@ VOID WPAInstallSharedKey(
 		/* Sanity check the length */
 		if ((GtkLen != LEN_WEP64) && (GtkLen != LEN_WEP128))
 		{
-			DBGPRINT(RT_DEBUG_ERROR, ("%s : (IF/ra%d) WEP key invlaid(%d) \n", 
+			DBGPRINT(RT_DEBUG_ERROR, ("%s : (IF/wlan%d) WEP key invlaid(%d) \n", 
 										__FUNCTION__, BssIdx, GtkLen));	
 			return;
 		}
@@ -4197,7 +4197,7 @@ VOID WPAInstallSharedKey(
 		/* Sanity check the length */
 		if (GtkLen < LEN_TK)
 		{
-			DBGPRINT(RT_DEBUG_ERROR, ("%s : (IF/ra%d) WPA key invlaid(%d) \n", 
+			DBGPRINT(RT_DEBUG_ERROR, ("%s : (IF/wlan%d) WPA key invlaid(%d) \n", 
 										__FUNCTION__, BssIdx, GtkLen));	
 			return;
 		}
