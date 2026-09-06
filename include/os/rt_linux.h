@@ -80,6 +80,11 @@
 #endif /* LINUX_VERSION_CODE */
 #endif /* RT_CFG80211_SUPPORT */
 
+/* asm/asm.h turns LONG into an assembler directive on mach-bmips, where
+ * linux/pci.h reaches it through dma-coherence.h. The driver has its own
+ * typedef in rtmp_type.h and needs that one. */
+#undef LONG
+
 
 /* must put the definition before include "os/rt_linux_cmm.h" */
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,29)
